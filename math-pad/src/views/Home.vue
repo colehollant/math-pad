@@ -92,28 +92,28 @@
   <main class="relative space-y-8 flex-1">
     <div class="absolute inset-0 h-full flex" :class="{'flex-col-reverse': layout === 'vertical'}">
       <div 
-        class="bg-gray-300 p-4" 
+        class="bg-gray-300 sm:p-4" 
         :class="{
-          'h-full w-1/2 pl-4 pr-2': layout === 'horizontal',
-          'w-full h-1/2 pt-2 pb-4': layout === 'vertical',
-          'h-full w-full p-4': layout === 'code',
+          'h-full w-1/2 sm:pl-4 sm:pr-2': layout === 'horizontal',
+          'w-full h-1/2 sm:pt-2 sm:pb-4': layout === 'vertical',
+          'h-full w-full sm:p-4': layout === 'code',
         }"
         :style="layout === 'horizontal' ? 'min-height: 16rem' : ''"
         v-if="layout !== 'preview'"
       >
-        <textarea :value="formula" @input="setFormulaDebounced" class="p-2 sm:p-4 h-full w-full shadow-lg bg-white text-gray-900 font-medium leading-loose rounded-xl resize-none focus:outline-none focus:shadow-outline"></textarea>
+        <textarea :value="formula" @input="setFormulaDebounced" class="p-3 sm:p-4 h-full w-full shadow-lg bg-white text-gray-900 font-medium leading-loose sm:rounded-xl resize-none focus:outline-none focus:shadow-outline"></textarea>
       </div>
       <div 
-        class="bg-gray-300 p-4" 
+        class="bg-gray-300 sm:p-4" 
         :class="{
-          'h-full w-1/2 pl-2 pr-4': layout === 'horizontal',
-          'w-full h-1/2 pt-4 pb-2': layout === 'vertical',
-          'h-full w-full p-4': layout === 'preview',
+          'h-full w-1/2 sm:pl-2 sm:pr-4': layout === 'horizontal',
+          'w-full h-1/2 sm:pt-4 sm:pb-2': layout === 'vertical',
+          'h-full w-full sm:p-4': layout === 'preview',
         }"
         :style="layout === 'horizontal' ? 'min-height: 16rem' : ''"
         v-if="layout !== 'code'"
       >
-        <div class="h-full mx-auto p-2 sm:p-4 bg-white rounded-xl shadow-lg overflow-auto" :style="layout === 'preview' ? 'max-width: 84ch' : ''">
+        <div class="h-full mx-auto p-3 sm:p-4 bg-white sm:rounded-xl shadow-lg overflow-auto" :style="layout === 'preview' ? 'max-width: 84ch' : ''">
           <div 
             id="maths" 
             class="prose max-w-none" 
