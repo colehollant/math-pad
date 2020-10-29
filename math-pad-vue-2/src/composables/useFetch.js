@@ -1,4 +1,4 @@
-import { reactive } from "vue"
+import { reactive } from "@vue/composition-api"
 
 function useFetch({ url, method, body, cb }) {
   return fetch(
